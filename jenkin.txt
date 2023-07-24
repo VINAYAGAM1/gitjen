@@ -1,0 +1,29 @@
+pipeline {
+  agent {
+    label 'slave'
+  }
+
+  tools {
+    maven'maven3'
+  }
+
+    stages {
+    stage('github') {
+      steps {
+        git 'https://github.com/Ganeshgitnub/devops.git'
+      }
+    }
+
+    stage('Build with Maven') {
+      steps {
+        sh 'mvn clean package'
+        sh 'mv target/*.war target/address.war'
+      }
+    }
+    stage ('Deploy to Tomcat Server') {
+      steps {
+        deploy adapters: [tomcat8(credentialsId: 'tomcat', path: '', url: 'http://43.205.119.235:8080/')], contextPath: 'address', war: '**/*.war'
+       }
+    }  
+  } 
+}
