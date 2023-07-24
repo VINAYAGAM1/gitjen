@@ -1,0 +1,7 @@
+AWS => IAM Policy JSON syntax
+Git => NA
+Jenkins => Declarative Pipeline Syntax / Scripted Pipeline Syntax
+Docker => Sample DockerFile
+Ansible => Sample yaml Playbook
+Terraform => terraform,provider + EC2,S3 Resource Block
+Kubernetes => Deloyment, POD, Service, PV&PVC.
