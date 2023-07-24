@@ -1,0 +1,7 @@
+1.sudo adduser new_user
+
+2.sudo adduser new_user --disabled-password
+
+mkdir .ssh
+
+https://repost.aws/knowledge-center/new-user-accounts-linux-instance
